@@ -192,27 +192,23 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
-# WCNSS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
-
-PRODUCT_PACKAGES += \
-    wcnss_service \
-    WCNSS_qcom_wlan_factory_nv.bin
-
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
     hostapd \
     wpa_supplicant \
-    wpa_supplicant.conf
-
-PRODUCT_PACKAGES += \
+    wpa_supplicant.conf \
     p2p_supplicant_overlay.conf \
     wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
     libcurl \
     libqsap_sdk \
-    libQWiFiSoftApCfg
+    libQWiFiSoftApCfg \
+    tcpdump \
+    wcnss_service \
+    WCNSS_qcom_cfg.ini \
+    WCNSS_qcom_wlan_factory_nv.bin
+
+PRODUCT_COPY_FILES += \
+    kernel/motorola/msm8226/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat
