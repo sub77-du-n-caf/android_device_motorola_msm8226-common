@@ -67,18 +67,14 @@ BLUETOOTH_HCI_USE_MCT := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# Charger
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/mmi_lpm/lpm_mode
-BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
-BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_NO_CHARGER_LED := true
-
-# CMHW
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
     $(VENDOR_PATH)/cmhw \
     hardware/cyanogen/cmhw
+
+# Charger
+CHARGER_DISABLE_INIT_BLANK := true
 
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
