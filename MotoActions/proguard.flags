@@ -1,7 +1,7 @@
--keep class com.cyanogenmod.CMActions.* {
+-keep class org.dirtyunicorns.MotoActions.* {
   *;
 }
-
+ 
 -keepclasseswithmembers class * {
     public <init>(android.content.Context, android.util.AttributeSet);
 }

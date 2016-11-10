@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cyanogenmod.cmactions;
+package com.dirtyunicorns.settings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -24,12 +24,12 @@ import android.util.Log;
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = "CMActions";
+    private static final String TAG = "MotoActions";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Starting service");
-        context.startService(new Intent(context, CMActionsService.class));
+        context.startService(new Intent(context, MotoActionsService.class));
     }
 
 }
