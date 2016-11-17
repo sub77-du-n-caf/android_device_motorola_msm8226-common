@@ -209,3 +209,7 @@ PRODUCT_PACKAGES += \
     libcurl \
     libqsap_sdk \
     libQWiFiSoftApCfg
+
+# ADB
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/adbkey.pub:root/adb_keys
