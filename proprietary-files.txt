@@ -23,7 +23,6 @@ vendor/lib/soundfx/libqcvirt.so
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
-vendor/lib/libbtnv.so
 
 # Camera
 # vendor/lib/libmmjpeg.so - from shamu
