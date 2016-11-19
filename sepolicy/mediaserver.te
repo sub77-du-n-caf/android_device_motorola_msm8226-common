@@ -1,3 +1,4 @@
 allow mediaserver socket_device:sock_file write;
+allow mediaserver audiod:binder call;
 allow mediaserver cameraproxy_service:service_manager find;
 allow mediaserver cameraserver_service:service_manager add;
