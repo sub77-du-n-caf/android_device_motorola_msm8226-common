@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
     libxml2 \
     camera.msm8226 \
     libbson \
+    libshim_camera
 
 # MotoActions
 PRODUCT_PACKAGES += \
