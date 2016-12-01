@@ -212,3 +212,5 @@ PRODUCT_PACKAGES += \
 # ADB
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/adbkey.pub:root/adb_keys
+
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 ro.adb.secure=0 persist.sys.usb.config=mtp
