@@ -87,6 +87,8 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8226 \
     memtrack.msm8226
 
+PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8x26/kernel-headers
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -128,11 +130,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # OMX
-PRODUCT_PACKAGES += \
-    libOmxCore \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
+#PRODUCT_PACKAGES += \
+#    libOmxCore \
+#    libOmxVdec \
+#    libOmxVenc \
+#    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \
@@ -198,3 +200,9 @@ PRODUCT_PACKAGES += \
     libcurl \
     libqsap_sdk \
     libQWiFiSoftApCfg
+
+# ADB
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/adbkey.pub:root/adb_keys
+
+#ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 ro.adb.secure=0 persist.sys.usb.config=mtp
